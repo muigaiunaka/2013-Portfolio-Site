@@ -1,0 +1,203 @@
+body{
+  background: #0a9999;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}
+
+body p{
+    font-family:sans-serif;
+    color: white;
+    font-size: 20px;
+}
+
+.ash{
+    visibility:hidden;
+    opacity:0;
+    transition: visibility 0s linear 0.5s,opacity 0.5s linear;
+    position: fixed;
+    width: 10%;
+    height: auto%;
+}
+
+#gameboy{ /* x364px y 141px W295px H497px8*/
+  position: relative;
+  margin: 100px auto;
+  height: 497px;
+  width: 295px;
+  background: #f6cf43;
+  border-radius: 10px 10px 60px 60px;
+  overflow: hidden;
+  -webkit-box-shadow: 0 13px 7px -4px rgba(0,0,0,0.45);
+  -moz-box-shadow: 0 13px 7px -4px rgba(0,0,0,0.45);
+  box-shadow: 0 13px 7px -4px rgba(0,0,0,0.45);
+}
+
+#screen{ /*04040e, x 380px, y 159px, W 260px, H 229px*/
+    position: absolute;
+    background: #04040e;
+    height: 229px;
+    width: 260px;
+    top: 18px;
+    left:16px;
+    -moz-border-radius: 10px 10px 20px 20px;
+    -webkit-border-radius: 10px 10px 20px 20px;
+    border-radius: 10px 10px 20px 20px;
+}
+
+#gameScreen{ /*x427 y 188 W 169 H 148*/
+    position: absolute;
+    width: 169px;
+    height: 158px;
+    background: rgba(100,100,100,1);
+    background-size:cover;
+    background-position:center;
+    left: 47px;
+    top:29px;
+    border-bottom: 1px solid white;
+    border:3px solid rgba(0, 0, 0, 0.67);
+    content:"";
+}
+
+#screen::before{
+    position: absolute; 
+    height: 6px;
+    width: 6px;
+    top: 60px;
+    left: 9px;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    background: #C00;
+    content:"";
+}
+#screen::after{
+    position: absolute;
+    top: 71px;
+    left: 8px;
+    color: rgba(70,70,70,1);
+    font-size: 8px;
+    font-family: sans-serif;
+    content:"POWER";
+}
+
+#dpad{
+  position: absolute;
+  width: 24px;
+  height: 72px;
+  top: 302px;
+  left: 48px;
+  background: rgba(33,38,33,1);
+  border-radius: 3px;
+  z-index: 1;
+}
+#dpad::before{
+  position: absolute;
+  width: 72px;
+  height: 24px;
+  top: 24px;
+  left: -24px;
+  background: rgba(33,38,33,1);
+  border-radius: 3px;
+  content: "";
+  z-index: 2;
+}
+#dpad::after{
+  position: absolute;
+  height: 25px;
+  width: 25px;
+  top: 24px;
+  border-radius: 100%;
+  background: rgba(70,70,70,1);
+  content: "";
+  z-index: 3;
+}
+
+#abutton, #bbutton{
+    width: 36px; height: 36px;
+    background: rgba(33,38,33,1);
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    text-align:center;
+    border-bottom:3.5px solid rgba(92, 77, 25, 0.78)
+}
+
+#abutton{ /* x 598 y 440 width+height 36px*/
+    position: absolute;
+    left: 234px;
+    top: 300px;
+}
+
+#abutton p, #bbutton p{
+    font-family: sans-serif;
+    font-size:24px;
+    text-align: center;
+    color:rgba(64, 63, 63, 0.93);
+    margin-top: 2px;
+    margin-left: 1px;
+    vertical-align: middle;
+}
+
+#bbutton{ /* x 544 y 457 width+height 36px*/
+    position: absolute;
+    left: 184px;
+    top: 337px;
+    width: 36px; height: 36px;
+}
+
+#abutton:hover, #bbutton:hover{
+    width:34px;
+    height:34px;
+    border-bottom: none;
+}
+
+#start{ /* x 473 y 545*/
+    left: 160px;
+}
+#select{
+    left: 110px;
+}
+
+#start, #select{
+    position: absolute;
+    width: 30px;
+    height: 14px;
+    top: 435px;
+    background: rgba(33,38,33,1);
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-box-shadow: 0px 0px 2px 3px rgba(100,100,100,.3);
+    -moz-box-shadow: 0px 0px 2px 3px rgba(100,100,100,.3);
+    box-shadow: 0px 0px 2px 3px rgba(100,100,100,.3);
+}
+
+#start::after{
+    position:absolute;
+    color:rgba(64, 63, 63, 0.93);
+    font-size: 9px;
+    left: 1px;
+    top: 20px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    content:"start";
+}
+
+#select::after{
+    position:absolute;
+    color:rgba(64, 63, 63, 0.93);
+    font-size: 9px;
+    left:-3px;
+    top: 20px;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    content:"select";
+
+}
+
+#start:hover, #select:hover{
+    width: 28px;
+    height: 13px;
+}
+
